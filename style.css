@@ -1,0 +1,217 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.6;
+
+}
+
+header {
+
+    background: #333;
+
+    color: green;
+
+    padding: 1rem 0;
+
+}
+
+nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 0 1rem;
+
+}
+
+.logo {
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+
+}
+
+.nav-links {
+
+    list-style: none;
+
+    display: flex;
+
+}
+
+.nav-links li {
+
+    margin-left: 20px;
+
+}
+
+.nav-links a {
+
+    color: orange;
+
+    text-decoration: none;
+
+    font-size: 1rem;
+
+}
+
+.burger {
+
+    display: none;
+
+    cursor: pointer;
+
+}
+
+.burger div {
+
+    width: 25px;
+
+    height: 3px;
+
+    background: #fff;
+
+    margin: 5px;
+
+    transition: all 0.3s ease;
+
+}
+
+main {
+
+    padding: 2rem;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+}
+
+section {
+
+    margin-bottom: 2rem;
+
+}
+
+.store-container {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+}
+
+.store-item {
+
+    background: #fxfxfx;
+
+    padding: 1rem;
+
+    border-radius: 5px;
+
+    flex: 1 1 calc(33.333% - 20px);
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+}
+
+.store-item img {
+
+    max-width: 100%;
+
+    border-radius: 5px;
+
+}
+
+footer {
+
+    text-align: center;
+
+    padding: 1rem 0;
+
+    background: #333;
+
+    color: orange;
+
+    margin-top: 2rem;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .nav-links {
+
+        display: none;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        position: absolute;
+
+        top: 60px;
+
+        left: 0;
+
+        background: #333;
+
+    }
+
+    .nav-links li {
+
+        text-align: center;
+
+        padding: 10px 0;
+
+    }
+
+    .nav-links.active {
+
+        display: flex;
+
+    }
+
+    .burger {
+
+        display: block;
+
+    }
+
+    .store-item {
+
+        flex: 1 1 calc(50% - 20px);
+
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .store-item {
+
+        flex: 1 1 100%;
+
+    }
+
+}
